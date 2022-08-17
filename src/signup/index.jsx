@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 function Signup() {
   const [password, setPassword] = useState('')
-  const passwordHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const passwordHandler = (event) => {
     setPassword(event.target.value)
   }
 

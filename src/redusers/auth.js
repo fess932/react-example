@@ -1,11 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { RootState } from '../store'
 
-type AuthState = {
-  value: string
-}
-
-const initialState: AuthState = { value: '' }
+const initialState = { value: '' }
 
 const authSlice = createSlice({
   name: 'auth',
@@ -20,8 +15,8 @@ const authSlice = createSlice({
   },
 })
 
-export const isAuthenticated = (state: RootState) => state.auth.value !== ''
-export const getAuth = (state: RootState) => state.auth.value
+export const isAuthenticated = (state) => state.auth.value !== ''
+export const getAuth = (state) => state.auth.value
 
 // Action creators are generated for each case reducer function
 export const { setAuth, logoff } = authSlice.actions

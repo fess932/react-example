@@ -1,4 +1,3 @@
-import { useSelect } from '@mui/base'
 import * as React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
@@ -40,17 +39,11 @@ function AppRoutes() {
   )
 }
 
-type ProtectedRouteProps = {
-  isAuth: boolean
-  authenticationPath: string
-  outlet: JSX.Element
-}
-
 function ProtectedRoute({
   isAuth,
   authenticationPath,
   outlet,
-}: ProtectedRouteProps) {
+}) {
   if (isAuth) {
     return outlet
   } else {

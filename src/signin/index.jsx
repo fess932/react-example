@@ -8,12 +8,12 @@ function Signin() {
   const dispatch = useAppDispatch()
 
   const [login, setLogin] = useState('')
-  const loginHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const loginHandler = (event) => {
     setLogin(event.target.value)
   }
 
   const [password, setPassword] = useState('')
-  const passwordHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const passwordHandler = (event) => {
     setPassword(event.target.value)
   }
 

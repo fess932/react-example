@@ -1,6 +1,6 @@
 import { Button, Input, Stack } from '@mui/material'
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 function Profile() {
   const navigate = useNavigate()
@@ -9,7 +9,7 @@ function Profile() {
   }
 
   const [password, setPassword] = useState('')
-  const passwordHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const passwordHandler = (event) => {
     setPassword(event.target.value)
   }
 
